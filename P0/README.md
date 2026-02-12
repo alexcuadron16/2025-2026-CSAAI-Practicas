@@ -1,9 +1,3 @@
-Practicando con GitHub
+# Práctica 0
 
-***********************
-**  Mi segundo cambio....
-*************************
-
-otro cambio
-
-cambio en remoto
+Probando el VSCode...
