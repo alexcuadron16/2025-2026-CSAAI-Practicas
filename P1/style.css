@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Special+Elite&family=EB+Garamond:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #1a1a1a url("img/skyline-new-york.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 30px 10px;
+    font-family: 'EB Garamond', serif;
+}
+
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fdfaf3 url("img/fondo-periodico.jpg");
+    border: 2px solid #000;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    overflow: hidden; 
+}
+
+.web-top-right {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 200px;
+    opacity: 0.4;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.web-bottom-left {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 180px;
+    opacity: 0.3;
+    z-index: 5;
+    pointer-events: none;
+    transform: rotate(180deg);
+}
+
+.spider-corner { position: fixed; top: 0; right: 0; width: 180px; opacity: 0.3; z-index: 100; pointer-events: none; }
+
+header { text-align: center; border-bottom: 5px double #000; padding-bottom: 20px; margin-bottom: 25px; }
+.logo-bugle { width: 140px; margin-bottom: 10px; }
+h1 { font-family: 'Playfair Display', serif; font-size: 2.6rem; text-transform: uppercase; }
+.meta-info { font-family: 'Special Elite', cursive; color: #b11313; font-size: 0.8rem; }
+
+.main-nav { border-top: 2px solid #000; border-bottom: 1px solid #000; margin-bottom: 30px; }
+.main-nav ul { display: flex; justify-content: center; list-style: none; }
+.nav-link { text-decoration: none; color: #000; font-family: 'Playfair Display', serif; padding: 12px 20px; text-transform: uppercase; font-size: 0.85rem; font-weight: bold; }
+.nav-link.active { background: #b11313; color: #fff; }
+
+.img-carnet { width: 100%; height: 220px; object-fit: cover; filter: grayscale(0.5); border: 1px solid #000; }
+.carnet-frame { width: 250px; margin: 0 auto 20px; }
+
+.career-photos { display: flex; gap: 10px; margin: 15px 0; }
+.photo-item { flex: 1; text-align: center; }
+.photo-item img { width: 100%; height: 140px; object-fit: cover; border: 1px solid #000; }
+.photo-item span { font-family: 'Special Elite'; font-size: 0.7rem; color: #b11313; display: block; text-align: center; margin-top: 5px; }
+
+.img-deco { width: calc(50% - 5px); height: 210px; object-fit: cover; border: 1px solid #000; opacity: 0.8; }
+.deco-images { display: flex; gap: 10px; margin-top: 15px; }
+
+.img-contained { width: 100%; height: auto; max-height: 280px; object-fit: cover; border: 1px solid #000; }
+.photo-medium { width: 100%; max-width: 280px; margin: 10px auto; }
+
+.project-card img { width: 100%; height: 200px; object-fit: cover; border: 1px solid #000; margin-bottom: 10px; }
+
+.newspaper-grid { display: flex; gap: 30px; }
+.column { flex: 1; }
+.border-right { border-right: 1px solid rgba(0,0,0,0.1); padding-right: 25px; }
+
+.section-title { background: #000; color: #fff; padding: 5px 15px; font-family: 'Playfair Display'; margin-bottom: 15px; text-transform: uppercase; }
+.side-h2 { font-family: 'Playfair Display'; font-size: 1.2rem; border-bottom: 2px solid #b11313; margin-bottom: 10px; text-transform: uppercase; }
+
+p { font-size: 1.1rem; line-height: 1.4; text-align: justify; margin-bottom: 15px; }
+.skills-list { list-style: none; font-family: 'Special Elite'; font-size: 0.85rem; }
+.skills-list li { margin-bottom: 8px; border-bottom: 1px dotted #ccc; }
+
+.frame { background: #fff; padding: 5px; border: 1px solid #000; box-shadow: 4px 4px 0 #ddd; }
+.caption { font-size: 0.75rem; text-align: center; margin-top: 5px; font-family: 'Special Elite'; }
+
+.opinion-quote { background: rgba(0,0,0,0.03); padding: 15px; border-left: 4px solid #b11313; margin-top: 20px; font-style: italic; }
+.opinion-quote cite { display: block; text-align: right; font-size: 0.75rem; margin-top: 5px; }
+
+.cards-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.project-card { flex: 1 1 calc(33% - 20px); background: #fff; border: 1px solid #000; padding: 15px; box-shadow: 5px 5px 0 #b11313; min-width: 250px; }
+
+.content-flex { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 30px; }
+.text-block { flex: 1.5; }
+.img-block { flex: 1; }
+.btn-link { display: inline-block; background: #000; color: #fff; padding: 8px 15px; text-decoration: none; font-family: 'Special Elite'; font-size: 0.8rem; border-radius: 2px; }

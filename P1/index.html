@@ -2,25 +2,83 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CV Spider-Man</title>
-
-    <!-- Adaptación a móvil -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>¡Hola! Soy Peter Parker - Mi Perfil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div id="container">
+        <img src="img/telarana.png" class="web-top-right" alt="">
+        <img src="img/telarana.png" class="web-bottom-left" alt="">
 
-    <h1>Currículum Vitae</h1>
+        <header>
+            <img src="img/logo-bugle.jpg" alt="Daily Bugle" class="logo-bugle">
+            <h1>PETER PARKER</h1>
+            <div class="meta-info">CIENTÍFICO A RATOS • FOTÓGRAFO POR NECESIDAD • NY 2026</div>
+        </header>
 
-    <h1>Datos Personales</h1>
-    <p>Nombre: Peter Parker</p>
-    <p>Alias: Spider-Man</p>
-    <p>Ciudad: Nueva York</p>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="nav-link active">¿QUIÉN SOY?</a></li>
+                <li><a href="about.html" class="nav-link">MI CEREBRO</a></li>
+                <li><a href="projects.html" class="nav-link">MIS CACHARROS</a></li>
+            </ul>
+        </nav>
 
-    <h1>Perfil Profesional</h1>
-    <p>
-        Superhéroe con amplios conocimientos en física, química y lucha contra el crimen.
-        Gran sentido de la responsabilidad.
+        <div class="newspaper-grid">
+            <main class="column border-right">
+                <h2 class="main-headline">RESUMEN PROFESIONAL</h2>
+                <p>Científico multidisciplinar con un don para estar en el lugar adecuado en el momento más inoportuno. Experto en capturar la noticia antes de que ocurra y en diseñar soluciones tecnológicas con presupuestos de estudiante. Busco una oportunidad donde mis habilidades de investigación (y mis reflejos) sean puestos a prueba.</p>
+                
+                <h3 class="side-h2">EXPERIENCIA LABORAL</h3>
+                <div class="job-entry">
+                    <strong>FOTÓGRAFO FREELANCE | Daily Bugle</strong><br>
+                    <em>2018 - Presente</em>
+                    <p>• Especialista en fotografía de acción extrema y "sujetos de difícil acceso".<br>
+                       • Documentación visual de crisis metropolitanas bajo presión crítica.<br>
+                       • Único fotógrafo capaz de conseguir primeros planos del "Trepamuros".</p>
+                </div>
+
+                <div class="job-entry">
+                    <strong>INTERNADO DE INVESTIGACIÓN | Stark Industries</strong><br>
+                    <em>2020 - 2024</em>
+                    <p>• Asistente directo en proyectos de nanotecnología y sistemas de soporte vital.<br>
+                       • Desarrollo de prototipos textiles inteligentes con alta resistencia al impacto.</p>
+                </div>
+
+                <h3 class="side-h2">FORMACIÓN ACADÉMICA</h3>
+                <p><strong>GRADO EN BIOFÍSICA</strong> - ESU</p>
+                <p><strong>DIPLOMA DE SECUNDARIA</strong> - Midtown School of Science and Technology</p>
+
+                <div class="career-photos">
+                    <div class="photo-item"><img src="img/empire-university.jpg" alt="ESU"><span>Grado en ESU</span></div>
+                    <div class="photo-item"><img src="img/shield-badge.jpg" alt="Stark"><span>I+D Stark</span></div>
+                    <div class="photo-item"><img src="img/avatar.jpg" alt="Bugle"><span>Prensa NY</span></div>
+                </div>
+            </main>
+
+            <aside class="column">
+                <div class="frame carnet-frame">
+                    <img src="img/peter-perfil.jpg" alt="Peter Parker" class="img-carnet">
+                    <p class="caption">ID: EL CHICO DE QUEENS</p>
+                </div>
+
+                <h3 class="side-h2">HABILIDADES</h3>
+                <ul class="skills-list">
+                    <li>✔ <strong>Química de Polímeros:</strong> Síntesis de adhesivos.</li>
+                    <li>✔ <strong>Ingeniería Mecánica:</strong> Micro-mecanismos.</li>
+                    <li>✔ <strong>Cualidad Especial:</strong> Sentido de la alerta agudo.</li>
+                </ul>
+
+                <h3 class="side-h2">LOGROS</h3>
+                <p style="font-size: 0.9rem;">• Ganador del Premio de Ciencias de la Feria Regional.<br>
+                • Más de 50 portadas en el Daily Bugle.</p>
+
+                <div class="deco-images">
+                    <img src="img/camara-vintage.jpg" alt="Equipo" class="img-deco">
+                    <img src="img/peter-estudiando.jpg" alt="Lab" class="img-deco">
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
