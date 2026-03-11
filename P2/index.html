@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETRO BOOM! - Arcade Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="arcade-cabinet">
+
+    <div class="screen">
+
+        <h1 class="blink">¡BOOM!</h1>
+
+        <div id="secret-display" class="secret-container">
+            <span class="digit" id="pos-0">*</span>
+            <span class="digit" id="pos-1">*</span>
+            <span class="digit" id="pos-2">*</span>
+            <span class="digit" id="pos-3">*</span>
+        </div>
+
+        <div class="stats">
+            <p>INTENTOS: <span id="attempts">07</span></p>
+            <p>TIEMPO: <span id="timer">00:00</span></p>
+        </div>
+
+        <div id="message" class="message-area">
+            INSERT COIN
+        </div>
+
+    </div>
+
+    <div class="controller">
+
+        <div id="keypad" class="keypad"></div>
+
+        <div class="controls">
+            <button id="btn-start" class="ctrl-btn btn-green">START</button>
+            <button id="btn-stop" class="ctrl-btn btn-red">STOP</button>
+            <button id="btn-reset" class="ctrl-btn btn-blue">RESET</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
