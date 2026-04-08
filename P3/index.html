@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Wing Tactical Display: Battle of Arkanis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="starwarsMusic" loop>
+    <source src="assets/starwars.mp3" type="audio/mpeg">
+</audio>
+
+<div class="xwing-cockpit">
+    <main class="combat-view">
+        <div id="game-wrapper">
+            <div id="start-screen" class="overlay">
+                <div class="hologram">
+                    <p class="mission-brief">> OBJETIVO: INTERCEPTAR CAZAS TIE</p>
+                    <p class="cta">PULSA [ENTER] PARA ATACAR</p>
+                </div>
+            </div>
+
+            <div id="end-screen" class="overlay hidden">
+                <div class="hologram">
+                    <h2 id="end-message">CONEXIÓN PERDIDA</h2>
+                    <button id="restartBtn" class="sw-button">REINICIAR NÚCLEO DE ENERGÍA</button>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas" width="800" height="500"></canvas>
+        </div>
+    </main>
+
+    <aside class="tactical-datapad">
+        <div class="datapad-header">TELEMETERÍA R2-D2</div>
+        
+        <div class="data-section">
+            <h3>RECOMPENSA IMPERIAL</h3>
+            <div class="digital-value" id="score">0000</div>
+        </div>
+
+        <div class="data-section">
+            <h3>ESCUDOS DEFLECTORES</h3>
+            <div class="digital-value shields-value" id="lives">3</div>
+        </div>
+
+        <div class="data-section">
+            <h3>POTENCIA LÁSER R-9</h3>
+            <div class="energy-module">
+                <div class="power-bar">
+                    <div id="energyFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-status">
+            <p>> LOCALIZACIÓN: Sector Arkanis</p>
+            <p>> AMENAZA: Enjambre TIE</p>
+            <p>> CANDIDATO KESSEL RUN: Confirmado</p>
+        </div>
+    </aside>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
