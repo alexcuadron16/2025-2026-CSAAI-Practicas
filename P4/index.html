@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat The Word</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Beat The Word</h1>
+            <div class="stats-bar">
+                <div class="stat">Nivel: <span id="level-num">1</span>/5</div>
+                <div class="stat">Tiempo: <span id="timer">0.0</span>s</div>
+                <div class="stat">Estado: <span id="status">En espera</span></div>
+            </div>
+        </header>
+
+        <main class="game-layout">
+            <aside class="sidebar">
+                <section class="config-box">
+                    <h3>Configuración</h3>
+                    <label>Secuencia</label>
+                    <select id="select-sequence">
+                        <option value="cama/casa">Cama / Casa</option>
+                        <option value="perro/gato">Perro / Gato</option>
+                        <option value="sol/luna">Sol / Luna</option>
+                    </select>
+
+                    <label>Nivel inicial</label>
+                    <select id="select-start-level">
+                        <option value="1">Nivel 1</option>
+                        <option value="2">Nivel 2</option>
+                        <option value="3">Nivel 3</option>
+                        <option value="4">Nivel 4</option>
+                        <option value="5">Nivel 5</option>
+                    </select>
+                </section>
+
+                <section class="config-box sound-controls">
+                    <h3>Sonido</h3>
+                    <div class="btn-group">
+                        <button id="btn-music-on">Música: ON</button>
+                        <button id="btn-music-off" class="off">Música: OFF</button>
+                    </div>
+                    <div class="btn-group">
+                        <button id="btn-sfx-on">Efectos: ON</button>
+                        <button id="btn-sfx-off" class="off">Efectos: OFF</button>
+                    </div>
+                </section>
+
+                <div class="buttons-box">
+                    <button id="btn-start" class="primary-btn">Empezar partida</button>
+                    <button id="btn-stop" class="secondary-btn" disabled>Detener</button>
+                </div>
+            </aside>
+
+            <section class="play-zone">
+                <div id="display-word" class="main-word-card">LISTO</div>
+                <div id="grid-8" class="grid-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <audio id="music-bg" loop src="./assets/audio/background-music.mp3"></audio>
+    <audio id="snd-step" src="./assets/audio/success.mp3"></audio>
+    <audio id="snd-level" src="./assets/audio/level-up.mp3"></audio>
+    <audio id="snd-win" src="./assets/audio/game-over.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
