@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot League - Sin Márgenes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="hud" class="hidden">
+            <div id="score-text">0 - 0</div>
+            <div id="mode-text">MODO DE JUEGO</div>
+        </div>
+
+        <div id="overlay-status" class="overlay hidden">
+            <div id="status-content">
+                <h2 id="texto-status"></h2>
+                <div id="contenedor-reinicio"></div>
+            </div>
+        </div>
+
+        <div id="menu-inicial" class="overlay">
+            <div class="menu-box">
+                <h1>BOT LEAGUE</h1>
+                <p>Selecciona la modalidad:</p>
+                <button onclick="configurarPartida('3-goles')">Partido a 3 Goles</button>
+                <button onclick="configurarPartida('gol-oro')">Gol de Oro</button>
+            </div>
+        </div>
+
+        <canvas id="campo"></canvas>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
