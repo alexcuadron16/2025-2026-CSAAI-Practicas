@@ -8,7 +8,6 @@ let modoActual = '';
 let puntuacion = { jugador: 0, bot: 0 };
 let teclas = {};
 
-// LÍMITE FÍSICO REAL PARA TODOS
 const MARGEN = 30; 
 
 const pelota = { x: 400, y: 250, radio: 10, dx: 0, dy: 0, friccion: 0.985 };
@@ -60,7 +59,6 @@ function iniciarCuentaAtras() {
 function actualizar() {
     if (estado !== 'JUGANDO') return;
 
-    // Movimiento Jugador
     let dx = 0, dy = 0;
     if (teclas['ArrowUp'] || teclas['KeyW']) dy = -1;
     if (teclas['ArrowDown'] || teclas['KeyS']) dy = 1;
@@ -73,11 +71,9 @@ function actualizar() {
         jugador.y += dy * jugador.v;
     }
     
-    // LÍMITES JUGADOR (No puede pisar fuera del MARGEN)
     jugador.x = Math.max(jugador.radio + MARGEN, Math.min(canvas.width - jugador.radio - MARGEN, jugador.x));
     jugador.y = Math.max(jugador.radio + MARGEN, Math.min(canvas.height - jugador.radio - MARGEN, jugador.y));
 
-    // Lógica Bots con límites
     bots.forEach(b => {
         let objX = b.x, objY = b.y;
         if (b.zona === 'defensa') {
@@ -97,13 +93,11 @@ function actualizar() {
         b.y = Math.max(b.radio + MARGEN, Math.min(canvas.height - b.radio - MARGEN, b.y));
     });
 
-    // Pelota
     pelota.x += pelota.dx;
     pelota.y += pelota.dy;
     pelota.dx *= pelota.friccion;
     pelota.dy *= pelota.friccion;
 
-    // Rebote Pelota en MARGEN (Techo y Suelo)
     if (pelota.y - pelota.radio < MARGEN) {
         pelota.y = MARGEN + pelota.radio;
         pelota.dy *= -1;
@@ -112,7 +106,6 @@ function actualizar() {
         pelota.dy *= -1;
     }
 
-    // Rebote o Gol en MARGEN (Laterales)
     if (pelota.x - pelota.radio < MARGEN) {
         if (pelota.y > pY && pelota.y < pY + porteriaH) gol('bot');
         else { pelota.x = MARGEN + pelota.radio; pelota.dx *= -1; }
